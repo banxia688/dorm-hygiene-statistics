@@ -227,9 +227,10 @@ for row in range(no_header_row, ws.max_row + 1):
     if current_gender != prior_gender:
         if prior_gender is not None and row - 1 != start_row_gender:
             ws.merge_cells(start_row=start_row_gender, start_column=2, end_row=row - 1, end_column=2)
-            print(
-                f"Row {start_row_gender}-{row - 1}: academy = {prior_academy}, "
-                f"gender = {prior_gender}, ———————————————————————————————————————————————————————————————————————— normalGenderMerged!")
+            # Debug
+            # print(
+            #     f"Row {start_row_gender}-{row - 1}: academy = {prior_academy}, "
+            #     f"gender = {prior_gender}, ———————————————————————————————————————————————————————————————————————— normalGenderMerged!")
 
         prior_gender = current_gender
         start_row_gender = row
