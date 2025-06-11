@@ -1,0 +1,9 @@
+# created by virtualenv automatically
+.venv/
+.idea/
+**/__pycache__
+!files/dorm_hygiene_info/
+files/dorm_hygiene_info/*.txt
+
+!files/dorm_hygiene_statistics/
+files/dorm_hygiene_statistics/*/*.xlsx
