@@ -136,9 +136,10 @@ for entry in sorted_data:
 # 创建 DataFrame
 df = pd.DataFrame(flat_data, columns=["学院", "性别", "楼栋", "宿舍号", "备注"])
 
-print('表格预览：')
-print(df)
-print()
+# Debug
+# print('表格预览：')
+# print(df)
+# print()
 
 # 添加“总计”列 并把 DataFrame 导出为 Excel 文件
 df['总计'] = df.groupby('学院')['学院'].transform('count')
