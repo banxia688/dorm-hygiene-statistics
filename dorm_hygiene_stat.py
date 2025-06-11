@@ -209,9 +209,10 @@ for row in range(no_header_row, ws.max_row + 1):
             # 当某个学院的性别多于一行时才进行合并
             if row - 1 != start_row_gender:
                 ws.merge_cells(start_row=start_row_gender, start_column=2, end_row=row - 1, end_column=2)
-                print(
-                    f"Row {start_row_gender}-{row - 1}: academy = {prior_academy}, "
-                    f"gender = {prior_gender}, ———————————————————————————————————————————————————————————————————————— specialGenderMerged!")
+                # Debug
+                # print(
+                #     f"Row {start_row_gender}-{row - 1}: academy = {prior_academy}, "
+                #     f"gender = {prior_gender}, ———————————————————————————————————————————————————————————————————————— specialGenderMerged!")
 
         # 学院更改时，先检查一次前面所遍历到的楼栋行是否需要合并，以免出现学院更改时楼栋不能正确合并的情况
         if prior_building is not None:
