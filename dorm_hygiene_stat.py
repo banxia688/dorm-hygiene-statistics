@@ -100,11 +100,11 @@ def custom_sort(data):
     return sorted(data, key=sort_key)
 
 
-# 从 txt 文本提取出来的初步数据
-print('从txt文本提取出来的初步数据:')
-for entity in hygiene_data:
-    print(entity)
-print()
+# Debug: 从 txt 文本提取出来的初步数据
+# print('从txt文本提取出来的初步数据:')
+# for entity in hygiene_data:
+#     print(entity)
+# print()
 
 # 把学院数据转化为数字，以便排序
 converted_data = convert_chinese_to_number(hygiene_data)
