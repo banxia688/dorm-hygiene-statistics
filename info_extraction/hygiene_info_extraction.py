@@ -16,10 +16,16 @@ with open(file_path, 'r', encoding='utf-8') as file:
             if "&" in parts[3] and parts[0] in parts[3]:
                 # 提取 "&" 后面的院系名称
                 additional_institute = parts[3].split("&")[1]
-
-                # 生成新行数据
-                new_row = [additional_institute] + parts[1:]  # 用 additional_institute 替换第一列
-                hygiene_data.append(new_row)
+                # 检查是否包含多个学院
+                if "&" in parts[3]:
+                    institutes = parts[3].split("&")
+                    if parts[0] in institutes:
+                        for institute in institutes:
+                            # 把不是本行的混宿学院另起一行
+                            if institute != parts[0]:
+                                # 生成新行数据
+                                new_row = [institute] + parts[1:]
+                                hygiene_data.append(new_row)
 
 # 进一步处理第三列和最后一列
 for entry in hygiene_data:
