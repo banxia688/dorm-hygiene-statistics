@@ -188,11 +188,11 @@ for row in range(no_header_row, ws.max_row + 1):
     current_academy = str(ws[f'A{row}'].value).strip()
     current_gender = str(ws[f'B{row}'].value).strip()
     current_building = str(ws[f'C{row}'].value).strip()
-
-    print(
-        f"Row {row}: prior_academy = {prior_academy}, current_Academy = {current_academy}, "
-        f"prior_gender = {prior_gender}, current_gender = {current_gender}, "
-        f"prior_building = {prior_building}, current_Building = {current_building}")
+    # Debug
+    # print(
+    #     f"Row {row}: prior_academy = {prior_academy}, current_Academy = {current_academy}, "
+    #     f"prior_gender = {prior_gender}, current_gender = {current_gender}, "
+    #     f"prior_building = {prior_building}, current_Building = {current_building}")
 
     # row 为遍历到的某一行，取值范围是 [2, ws.max_row-1]
     # 处理学院列
